@@ -12,3 +12,12 @@ wget https://files.pythonhosted.org/packages/ae/2a/0a0ab2833e5270664fb5fae590717
 unzip Pillow-5.4.1-cp37-cp37m-manylinux1_x86_64.whl
 rm -rf Pillow-5.4.1.dist-info
 zip -r9 lambda.zip PIL lambda_handler.py
+
+Assign on the console the environment variable  DEST_BUCKET to the bucket name
+
+Edit the managed policy assigned to the lambda function rol with the
+content of executionrole.json and replace the arn for the S3 buckets
+
+Create a trigger to invoke this function:
+on the S3 bucket where the images will be loaded in Events add a notification
+to trigger the lambda function when a put event happens
