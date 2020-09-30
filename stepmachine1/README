@@ -1,0 +1,16 @@
+# Serverless reminder with Step Function, API Gateway, Lambda and S3
+====================================================================
+
+
+Access to a static web site hosted in S3, making a http post to an
+API Gateway integrated with the lambda function
+---------------------------------------------------------------------
+
+The lambda function integrated role will launch a step machine
+The steps function running the lambda functions will use SES and SNS
+---------------------------------------------------------------------
+
+Create a new REST PI Gateway to integrate with the state machine and
+the lambda function
+---------------------------------------------------------------------
+
